@@ -17,6 +17,5 @@ import lombok.Setter;
 public class Extra extends Identifier {
 
     // We do not need Auditable for this class, then we only extends the Identifier to have UUID
-
     private String extraSomething;
 }
