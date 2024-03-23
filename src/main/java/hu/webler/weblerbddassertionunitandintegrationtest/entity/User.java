@@ -1,7 +1,6 @@
 package hu.webler.weblerbddassertionunitandintegrationtest.entity;
 
 import hu.webler.weblerbddassertionunitandintegrationtest.entity.base.Auditable;
-import hu.webler.weblerbddassertionunitandintegrationtest.entity.base.Identifier;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
