@@ -1,4 +1,4 @@
-package hu.webler.weblerbddassertionunitandintegrationtest.model;
+package hu.webler.weblerbddassertionunitandintegrationtest.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

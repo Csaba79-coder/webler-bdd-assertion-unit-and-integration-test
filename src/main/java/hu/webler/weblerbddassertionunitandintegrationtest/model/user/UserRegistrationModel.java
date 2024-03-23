@@ -1,4 +1,4 @@
-package hu.webler.weblerbddassertionunitandintegrationtest.model;
+package hu.webler.weblerbddassertionunitandintegrationtest.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,9 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserLoginModel {
+public class UserRegistrationModel {
 
     private String email;
     private String password;
+    private String repeatedPassword;
 }

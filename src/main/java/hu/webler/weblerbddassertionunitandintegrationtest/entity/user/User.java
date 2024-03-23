@@ -1,4 +1,4 @@
-package hu.webler.weblerbddassertionunitandintegrationtest.entity;
+package hu.webler.weblerbddassertionunitandintegrationtest.entity.user;
 
 import hu.webler.weblerbddassertionunitandintegrationtest.entity.base.Auditable;
 import jakarta.persistence.Column;
