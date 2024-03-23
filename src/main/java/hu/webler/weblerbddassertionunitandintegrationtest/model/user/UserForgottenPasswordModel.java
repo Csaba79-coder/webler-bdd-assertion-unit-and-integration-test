@@ -13,7 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 // TODO not used in project implement later!
 // in this scenario the token and expiry date must be saved into database to the user itself!
-public class UserForgottenPassword {
+public class UserForgottenPasswordModel {
 
     private String token;
     private Date expiryDate;
