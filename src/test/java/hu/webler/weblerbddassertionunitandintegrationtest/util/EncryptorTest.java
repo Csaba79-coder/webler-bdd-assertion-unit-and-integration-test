@@ -42,10 +42,10 @@ class EncryptorTest {
                 .hasSize(32);
         assertThat(encryptedPassword2)
                 .hasSize(32);
-        assertEquals(encryptedPassword2.length(), 32);
+        assertEquals(32, encryptedPassword2.length());
 
-        then(encryptedPasswordAgain)
-                .isEqualTo(encryptedPassword);
+        then(encryptedPassword)
+                .isEqualTo(encryptedPasswordAgain);
     }
 
     @Test
