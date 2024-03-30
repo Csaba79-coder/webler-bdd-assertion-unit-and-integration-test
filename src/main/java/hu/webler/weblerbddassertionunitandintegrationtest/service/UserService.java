@@ -88,6 +88,7 @@ public class UserService {
                 }));
     }
 
+    // TODO make UserMode here, and map back to User !!!
     public User findUserByEmail(String email) {
         return userRepository.findUserByEmail(email)
                 .orElseThrow(() -> {
