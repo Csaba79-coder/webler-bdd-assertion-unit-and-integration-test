@@ -6,7 +6,6 @@ import lombok.Getter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -18,11 +17,11 @@ public class Auditable extends Identifier {
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false)
-    private LocalDate createdAt = LocalDate.now();
+    private LocalDateTime createdAt = LocalDateTime.now();
 
     @UpdateTimestamp
     @Column(name = "updated_at", nullable = false)
-    private LocalDate updatedAt = LocalDate.now();
+    private LocalDateTime updatedAt = LocalDateTime.now();
 
     @Column(name = "created_by", nullable = false)
     private UUID createdBy = fromString("b37c1f7f-cd48-496d-a5ba-77863b33aa3e");

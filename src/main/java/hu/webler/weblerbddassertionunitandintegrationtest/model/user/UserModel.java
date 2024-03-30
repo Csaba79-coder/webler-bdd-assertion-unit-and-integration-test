@@ -3,6 +3,7 @@ package hu.webler.weblerbddassertionunitandintegrationtest.model.user;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -13,8 +14,8 @@ import java.util.UUID;
 public class UserModel {
 
     private UUID id;
-    private LocalDate createdAt;
-    private LocalDate updatedAt;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
     private UUID createdBy;
     private UUID updatedBy;
     private String email;
