@@ -4,13 +4,15 @@ import hu.webler.weblerbddassertionunitandintegrationtest.entity.user.User;
 import hu.webler.weblerbddassertionunitandintegrationtest.model.user.UserModel;
 import hu.webler.weblerbddassertionunitandintegrationtest.model.user.UserRegistrationModel;
 
+import static hu.webler.weblerbddassertionunitandintegrationtest.util.Encryptor.encryptPassword;
+
 public class Mapper {
 
     public static User mapUserRegModelToEntity(UserRegistrationModel model) {
         return User
                 .builder()
                 .email(model.getEmail())
-                .password(model.getPassword())
+                .password(encryptPassword(model.getPassword()))
                 .build();
     }
 
