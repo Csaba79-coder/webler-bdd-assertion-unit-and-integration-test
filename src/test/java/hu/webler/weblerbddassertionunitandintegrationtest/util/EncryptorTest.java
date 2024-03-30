@@ -30,24 +30,31 @@ class EncryptorTest {
                 .isNotNull()
                 .isNotEmpty();
 
-        assertThat(encryptedPassword).isNotNull();
-        assertThat(encryptedPassword).isNotEmpty();
+        assertThat(encryptedPassword)
+                .isNotNull();
+        assertThat(encryptedPassword)
+                .isNotEmpty();
 
-        then(encryptedPassword).hasSize(32);
+        then(encryptedPassword)
+                .hasSize(32);
 
-        then(encryptedPassword2).hasSize(32);
-        assertThat(encryptedPassword2).hasSize(32);
+        then(encryptedPassword2)
+                .hasSize(32);
+        assertThat(encryptedPassword2)
+                .hasSize(32);
         assertEquals(encryptedPassword2.length(), 32);
 
-        then(encryptedPasswordAgain).isEqualTo(encryptedPassword);
+        then(encryptedPasswordAgain)
+                .isEqualTo(encryptedPassword);
     }
 
     @Test
-    @DisplayName("Given password is null or empty string when encrypt password then returns illegal argument exception")
-    public void givenPasswordIsNullOrEmptyString_whenEncryptPassword_thenReturnsIllegalArgumentException() {
+    @DisplayName("Given password is null or empty string or blank when encrypt password then returns illegal argument exception")
+    public void givenPasswordIsNullOrEmptyStringOrBlank_whenEncryptPassword_thenReturnsIllegalArgumentException() {
         // Given
         String nullPassword = null;
         String emptyStringPassword = "";
+        String blankPassword = " ";
 
         // When / Then
         thenThrownBy(() ->
@@ -61,6 +68,10 @@ class EncryptorTest {
                 .isInstanceOf(IllegalArgumentException.class);
         assertThatThrownBy(() ->
                 encryptPassword(emptyStringPassword))
+                .isInstanceOf(IllegalArgumentException.class);
+
+        thenThrownBy(() ->
+                encryptPassword(blankPassword))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 }
